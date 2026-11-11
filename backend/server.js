@@ -1,5 +1,5 @@
-
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const db = require('./config/db');
 const userRouter = require('./routes/user');
@@ -8,6 +8,16 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24,
+        httpOnly: true,
+        sameSite: 'lax'
+    }
+}));
 
 app.use(express.static(path.join(__dirname, '../frontend')));
 
