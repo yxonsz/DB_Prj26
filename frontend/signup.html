@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 | MOIM</title>
+
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <main class="signup-container">
+
+        <div class="signup-logo">
+            <h1>MOIM<span>.</span></h1>
+            <p>우리의 약속을 더 쉽게</p>
+        </div>
+
+        <div class="signup-box">
+            <h2>회원가입</h2>
+            <p class="signup-description">
+                MOIM과 함께 친구들과 약속을 만들어 보세요!
+            </p>
+
+            <form id="signupForm">
+
+                <div class="input-group">
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" placeholder="이름을 입력해주세요">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" placeholder="비밀번호를 입력해주세요">
+                </div>
+
+                <div class="input-group">
+                    <label for="passwordCheck">비밀번호 확인</label>
+                    <input type="password" id="passwordCheck" placeholder="비밀번호를 다시 입력해주세요">
+                </div>
+
+                <button type="submit" class="signup-button">
+                    회원가입
+                </button>
+
+            </form>
+
+            <p class="login-link">
+                이미 계정이 있으신가요?
+                <a href="login.html">로그인</a>
+            </p>
+        </div>
+    </main>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>
